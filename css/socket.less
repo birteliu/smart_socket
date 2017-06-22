@@ -1,4 +1,5 @@
 @yellow: #F7C700;
+@gray: #F4F7F6;
 .transition(@duration: 0.3s, @ease: ease-in-out) {
     -webkit-transition: all @duration @ease;
     -moz-transition: all @duration @ease;
@@ -55,12 +56,20 @@
 
 .power {
 	padding: 20px 40px;
+	img {
+		border: 2px solid darken(@gray, 10%);
+		border-radius: 10px;
+		margin: 15px 0;
+	}
 	p {
 		font-size: 16px;
 		padding-top: 5px;
 	}
 	.progress-bar {
 		background-color: @yellow;
+	}
+	.product-list {
+		line-height: 1.6;
 	}
 }
 .power-section {
@@ -69,7 +78,7 @@
   }
 }
 .power-mobile {
-	background-color: #F4F7F6;
+	background-color: @gray;
 	@media (min-width: 750px) {
   		display: none;
   }
@@ -134,10 +143,10 @@
 		}
 		a.more {
 			color: @yellow;
-			background-color: #F4F7F6;
+			background-color: @gray;
 			&:hover {
 				text-decoration: none;
-				background-color: lighten(#F4F7F6, 10%);
+				background-color: lighten(@gray, 10%);
 				border-color: lighten(@yellow, 10%);
 				color: lighten(@yellow, 10%);
 				.transition;
