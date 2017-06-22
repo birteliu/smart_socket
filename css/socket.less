@@ -59,13 +59,27 @@
 
 .power {
 	padding: 20px 40px;
+	h3 {
+		padding-bottom: 8px;
+	}
+	a {
+			border-color: darken(@gray, 10%);
+			background-color: lighen(@gray, 5%);
+			color: #343434;
+			&:hover {
+				.transition;
+				background-color: lighten(@gray, 20%);
+				border-color: darken(@gray, 10%);
+				color: darken(@gray, 50%);
+			}
+		}
 	img {
 		border: 2px solid darken(@gray, 5%);
 		border-radius: 10px;
 		margin: 15px 0;
 		@media (max-width: 750px) {
   		margin-top: 0px;
-  }
+  	}
 	}
 	p {
 		font-size: 16px;
